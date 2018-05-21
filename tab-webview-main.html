@@ -452,11 +452,9 @@
 				var digarams = function(x, y, z, shockTime, obj, data, gpsTime) {
 					var oilArea = document.getElementById("oil-area-basic");
 					var myAreaChart = echarts.init(oilArea);
-					if(marker){
-//						map.clearOverlays();
-						map.removeOverlay(marker);
+					if(data.data.length == 0){
+						map.clearOverlays();
 					}
-//					
 					optionArea = null;
 					optionArea = {
 						title: {

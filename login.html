@@ -147,10 +147,10 @@
 			</form>
 			<div class="mui-content-padded">
 				<button id='login' class="mui-btn mui-btn-block mui-btn-primary" data-loading-text="登陆中..." disabled>登  录</button>
-				<div class="link-area">
+				<!--<div class="link-area">
 					<span class="spliter"></span>
 					<a class="mui-pull-right mui-reg-forgot" id='forgetPassword'>忘记密码 ?</a>
-				</div>
+				</div>-->
 			</div>
 			<div class="mui-content-padded oauth-area">
 
@@ -285,7 +285,7 @@
 					var account2Box = doc.getElementById('account2');
 					var password2Box = doc.getElementById('password2');
 					var autoLoginButton = doc.getElementById("autoLogin");
-					var forgetButton = doc.getElementById('forgetPassword');
+//					var forgetButton = doc.getElementById('forgetPassword');
 					var setButton = function() {
 						loginButton.disabled = (!(app.checkValidAccount(account2Box.value) && password2Box.value != '' && password2Box.value.length >= 6));
 					}
@@ -323,22 +323,22 @@
 							app.setSettings(settings);
 						}, 50);
 					}, false);
-					forgetButton.addEventListener('tap', function(event) {
-						$.openWindow({
-							url: 'forget_password.html',
-							id: 'forget_password',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, false);
+//					forgetButton.addEventListener('tap', function(event) {
+//						$.openWindow({
+//							url: 'forget_password.html',
+//							id: 'forget_password',
+//							preload: true,
+//							show: {
+//								aniShow: 'pop-in'
+//							},
+//							styles: {
+//								popGesture: 'hide'
+//							},
+//							waiting: {
+//								autoShow: false
+//							}
+//						});
+//					}, false);
 					//
 					window.addEventListener('resize', function() {
 						//						oauthArea.style.display = document.body.clientHeight > 400 ? 'block' : 'none';
